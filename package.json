@@ -9,15 +9,32 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^2.0.14",
+    "@google/generative-ai": "^0.24.1",
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^9.3.0",
+    "@splinetool/runtime": "^1.10.57",
+    "ai": "^5.0.44",
+    "axios": "^1.12.2",
+    "docx": "^9.5.1",
+    "firebase": "^12.2.1",
+    "framer-motion": "^12.23.16",
+    "gsap": "^3.13.0",
+    "lucide-react": "^0.544.0",
+    "mammoth": "^1.10.0",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.1",
+    "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.3"
+    "three": "^0.180.0",
+    "zod": "^4.1.8"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4"
   }
 }
