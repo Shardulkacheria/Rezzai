@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RezzAI Job Automation</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .status {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .status-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .status-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .status-label {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .status-value {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .status-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-left: 8px;
+    }
+    
+    .status-indicator.connected {
+      background: #10b981;
+    }
+    
+    .status-indicator.disconnected {
+      background: #ef4444;
+    }
+    
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .btn-primary {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">RezzAI</div>
+    <div class="subtitle">Job Automation</div>
+  </div>
+  
+  <div class="status">
+    <div class="status-item">
+      <span class="status-label">Extension Status</span>
+      <div style="display: flex; align-items: center;">
+        <span class="status-value" id="extensionStatus">Active</span>
+        <div class="status-indicator connected" id="extensionIndicator"></div>
+      </div>
+    </div>
+    
+    <div class="status-item">
+      <span class="status-label">User Data</span>
+      <div style="display: flex; align-items: center;">
+        <span class="status-value" id="userDataStatus">Not Loaded</span>
+        <div class="status-indicator disconnected" id="userDataIndicator"></div>
+      </div>
+    </div>
+    
+    <div class="status-item">
+      <span class="status-label">Current Page</span>
+      <span class="status-value" id="currentPage">LinkedIn Jobs</span>
+    </div>
+  </div>
+  
+  <div class="actions">
+    <button class="btn btn-primary" id="refreshData">Refresh Data</button>
+    <button class="btn btn-secondary" id="openDashboard">Open RezzAI Dashboard</button>
+  </div>
+  
+  <div class="footer">
+    <div>Version 1.0.0</div>
+    <div>Ready for LinkedIn job applications</div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
+

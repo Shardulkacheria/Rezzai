@@ -2,7 +2,7 @@ import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } fro
 
 export async function POST(request) {
   try {
-    const { resume } = await request.json();
+    const { resume, templateType, jobTitle, company } = await request.json();
 
     if (!resume) {
       return Response.json({ error: 'No resume data provided' }, { status: 400 });
@@ -244,11 +244,17 @@ export async function POST(request) {
     // Generate the DOCX buffer
     const buffer = await Packer.toBuffer(doc);
 
+    // Generate filename with template type
+    const templateName = templateType ? templateType.replace(/\s+/g, '_') : 'Resume';
+    const companyName = company ? company.replace(/\s+/g, '_') : 'Company';
+    const jobTitleName = jobTitle ? jobTitle.replace(/\s+/g, '_') : 'Position';
+    const filename = `${companyName}_${jobTitleName}_${templateName}.docx`;
+
     // Return the DOCX file
     return new Response(buffer, {
       headers: {
         'Content-Type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-        'Content-Disposition': 'attachment; filename="resume.docx"',
+        'Content-Disposition': `attachment; filename="${filename}"`,
       },
     });
 
