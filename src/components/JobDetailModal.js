@@ -228,7 +228,7 @@ export default function JobDetailModal({ job, isOpen, onClose, onApply, userProf
                 <div className="space-y-4 sm:space-y-6">
                   <div className="text-center">
                     <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Choose Your Application Method</h3>
-                    <p className="text-white/60 text-sm sm:text-base">Select how you'd like to apply for this position</p>
+                    <p className="text-white/60 text-sm sm:text-base">Select how you&apos;d like to apply for this position</p>
                   </div>
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">

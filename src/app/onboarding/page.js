@@ -59,8 +59,8 @@ export default function OnboardingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 sm:p-6">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Welcome! Let's set up your profile</h1>
-        <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base">Upload your resume in DOCX format. We'll parse it with Gemini AI for 100% accurate extraction.</p>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Welcome! Let&apos;s set up your profile</h1>
+        <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base"> Upload your resume in DOCX format. We&apos;ll parse it with Gemini AI for 100% accurate extraction.</p>
 
                {error && (
                  <div className="bg-red-500/20 border border-red-500/50 rounded-lg p-3 mb-4">
@@ -104,7 +104,7 @@ export default function OnboardingPage() {
         {parsed && (
           <div className="mt-6 sm:mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-4 sm:p-6 border border-white/20">
             <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Parsing Complete!</h2>
-            <p className="text-white/80 mb-4 sm:mb-6 text-sm sm:text-base">We've extracted the following information from your resume. Click continue to review and edit it.</p>
+            <p className="text-white/80 mb-4 sm:mb-6 text-sm sm:text-base"> We&apos;ve extracted the following information from your resume. Click continue to review and edit it.</p>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
               {/* Basic Information */}
